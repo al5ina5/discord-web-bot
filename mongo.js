@@ -1,11 +1,11 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGODB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
     useCreateIndex: true
-})
+});
 
 exports.UserModel = mongoose.model('UserModel', mongoose.Schema({
     discord_id: String,
@@ -19,8 +19,6 @@ exports.UserModel = mongoose.model('UserModel', mongoose.Schema({
     },
     techStack:{
         type: Array,
-        defautl :[]
+        default :[]
     }
-}))
-
-
+}));
